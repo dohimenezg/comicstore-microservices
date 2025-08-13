@@ -16,6 +16,7 @@ public class UserResponseDTO {
     private String address;
     private String bio;
     private Long profilePictureId;
+    private boolean enabled;
     private Set<RoleResponseDTO> roles; 
 
     public static UserResponseDTO fromEntity(User user) {
@@ -27,6 +28,7 @@ public class UserResponseDTO {
         dto.setAddress(user.getAddress());
         dto.setBio(user.getBio());
         dto.setProfilePictureId(user.getProfilePictureId());
+        dto.setEnabled(user.isEnabled());
         dto.setRoles(
             user.getRoles()
                 .stream()

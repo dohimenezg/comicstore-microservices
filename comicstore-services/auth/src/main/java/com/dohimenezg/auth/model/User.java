@@ -57,10 +57,10 @@ public class User implements UserDetails {
     @Column(name = "user_picture_id", nullable = true)
     private Long profilePictureId; 
 
-    @Column(name = "user_enabled", nullable = false)
-    private boolean enabled;
     // @Column(name = "user_enabled", nullable = false)
     // private boolean enabled = true; // El valor por defecto en Java debe coincidir con el de la BD
+    @Column(name = "user_enabled", nullable = false)
+    private boolean enabled;
 
     @ManyToMany(
         fetch = FetchType.EAGER, 
